@@ -16,7 +16,7 @@ Fetch Posts Api to display list of post of users.
 ## Prerequisites
 
 - Xcode 14.0 or later
-- iOS 13.2 or later
+- iOS 14.0 or later
 - macOS 12.6 or later
 
 ## 1. Dependencies
@@ -30,9 +30,9 @@ We will be building this app using Xcode 11.3 with Swift 5.0. This app also cons
 ## 2. Library Dependencies
 
 - RxSwift (Reactive library in Swift [Installation instructions](https://github.com/ReactiveX/RxSwift#installation).)
-
 - RxCocoa (Reactive library for UIKit in Swift [Installation instructions](https://github.com/ReactiveX/RxSwift#installation).)
 - RxGesture (Reactive Gesture library for UIKit in Swift [Installation instructions](https://github.com/RxSwiftCommunity/RxGesture#installation).)
+- Alamofire (Network library for API calls in Swift [Installation instructions](https://github.com/Alamofire/Alamofire#installation).)
 
 ## 3. Written in Swift
 

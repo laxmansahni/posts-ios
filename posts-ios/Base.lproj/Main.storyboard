@@ -120,10 +120,58 @@
                     <view key="view" contentMode="scaleToFill" id="7zx-1h-ceS">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hDb-1q-OMd">
+                                <rect key="frame" x="-12" y="-14" width="414" height="814"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PostTableViewCell" rowHeight="70" id="LTD-Mc-Wx9" customClass="PostTableViewCell" customModule="posts_ios" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="414" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LTD-Mc-Wx9" id="vmJ-3G-Cbd">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B9S-wu-mJ6">
+                                                    <rect key="frame" x="25" y="11" width="364" height="21"/>
+                                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ren-MR-QH4">
+                                                    <rect key="frame" x="25" y="37" width="364" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="iSO-rq-hM0"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ren-MR-QH4" secondAttribute="trailing" constant="5" id="HN9-A3-K1V"/>
+                                                <constraint firstItem="ren-MR-QH4" firstAttribute="leading" secondItem="vmJ-3G-Cbd" secondAttribute="leadingMargin" constant="5" id="Qys-np-Haq"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="B9S-wu-mJ6" secondAttribute="trailing" constant="5" id="VjA-dp-DJa"/>
+                                                <constraint firstItem="B9S-wu-mJ6" firstAttribute="top" secondItem="vmJ-3G-Cbd" secondAttribute="topMargin" id="cH6-Z4-Apw"/>
+                                                <constraint firstItem="B9S-wu-mJ6" firstAttribute="leading" secondItem="vmJ-3G-Cbd" secondAttribute="leadingMargin" constant="5" id="iDe-mm-6e5"/>
+                                                <constraint firstItem="ren-MR-QH4" firstAttribute="top" secondItem="B9S-wu-mJ6" secondAttribute="bottom" constant="5" id="rEb-lq-zHl"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="postIdLabel" destination="B9S-wu-mJ6" id="jQn-AH-jZH"/>
+                                            <outlet property="postTitleLabel" destination="ren-MR-QH4" id="hvo-Tt-c9Y"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="xpB-le-zjA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Posts" id="vLR-wV-hQe"/>
+                    <connections>
+                        <outlet property="postTableView" destination="hDb-1q-OMd" id="m3m-ON-mFu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mya-Uw-po8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

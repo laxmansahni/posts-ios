@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B7D1C792A02A96C00CF23EC /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7D1C782A02A96C00CF23EC /* Post.swift */; };
+		4B7D1C7B2A02AA0A00CF23EC /* PostsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7D1C7A2A02AA0A00CF23EC /* PostsViewModel.swift */; };
+		4B7D1C7D2A02AA8700CF23EC /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7D1C7C2A02AA8700CF23EC /* APIService.swift */; };
+		4B7D1C832A02AD9A00CF23EC /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7D1C822A02AD9A00CF23EC /* PostTableViewCell.swift */; };
+		4B7D1C852A02B51200CF23EC /* PostTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7D1C842A02B51200CF23EC /* PostTableViewDataSource.swift */; };
+		4B7D1C882A02CFC200CF23EC /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 4B7D1C872A02CFC200CF23EC /* Alamofire */; };
 		4BEBEA0D2A023EDD00C05858 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEBEA0C2A023EDD00C05858 /* AppDelegate.swift */; };
 		4BEBEA0F2A023EDD00C05858 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEBEA0E2A023EDD00C05858 /* SceneDelegate.swift */; };
 		4BEBEA112A023EDD00C05858 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEBEA102A023EDD00C05858 /* LoginViewController.swift */; };
@@ -26,6 +32,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4B7D1C782A02A96C00CF23EC /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		4B7D1C7A2A02AA0A00CF23EC /* PostsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewModel.swift; sourceTree = "<group>"; };
+		4B7D1C7C2A02AA8700CF23EC /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		4B7D1C822A02AD9A00CF23EC /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		4B7D1C842A02B51200CF23EC /* PostTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewDataSource.swift; sourceTree = "<group>"; };
 		4BEBEA092A023EDD00C05858 /* posts-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "posts-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BEBEA0C2A023EDD00C05858 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BEBEA0E2A023EDD00C05858 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +60,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4BEBEA412A02746600C05858 /* RxSwift in Frameworks */,
+				4B7D1C882A02CFC200CF23EC /* Alamofire in Frameworks */,
 				4BEBEA442A027C9200C05858 /* RxGesture in Frameworks */,
 				4BEBEA3F2A02746600C05858 /* RxCocoa in Frameworks */,
 			);
@@ -57,6 +69,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B7D1C812A02AD9A00CF23EC /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				4B7D1C822A02AD9A00CF23EC /* PostTableViewCell.swift */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
 		4BEBEA002A023EDD00C05858 = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +96,7 @@
 		4BEBEA0B2A023EDD00C05858 /* posts-ios */ = {
 			isa = PBXGroup;
 			children = (
+				4B7D1C812A02AD9A00CF23EC /* TableViewCells */,
 				4BEBEA382A02729C00C05858 /* Tools */,
 				4BEBEA282A0241D300C05858 /* common */,
 				4BEBEA272A0241C000C05858 /* Controllers */,
@@ -102,6 +123,7 @@
 		4BEBEA242A02417800C05858 /* WebService */ = {
 			isa = PBXGroup;
 			children = (
+				4B7D1C7C2A02AA8700CF23EC /* APIService.swift */,
 			);
 			path = WebService;
 			sourceTree = "<group>";
@@ -110,6 +132,8 @@
 			isa = PBXGroup;
 			children = (
 				4BEBEA362A02725700C05858 /* LoginViewModel.swift */,
+				4B7D1C842A02B51200CF23EC /* PostTableViewDataSource.swift */,
+				4B7D1C7A2A02AA0A00CF23EC /* PostsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -117,6 +141,7 @@
 		4BEBEA262A0241B400C05858 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4B7D1C782A02A96C00CF23EC /* Post.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -170,6 +195,7 @@
 				4BEBEA3E2A02746600C05858 /* RxCocoa */,
 				4BEBEA402A02746600C05858 /* RxSwift */,
 				4BEBEA432A027C9200C05858 /* RxGesture */,
+				4B7D1C872A02CFC200CF23EC /* Alamofire */,
 			);
 			productName = "posts-ios";
 			productReference = 4BEBEA092A023EDD00C05858 /* posts-ios.app */;
@@ -202,6 +228,7 @@
 			packageReferences = (
 				4BEBEA3D2A02746600C05858 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				4BEBEA422A027C9200C05858 /* XCRemoteSwiftPackageReference "RxGesture" */,
+				4B7D1C862A02CFC200CF23EC /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 4BEBEA0A2A023EDD00C05858 /* Products */;
 			projectDirPath = "";
@@ -230,13 +257,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B7D1C852A02B51200CF23EC /* PostTableViewDataSource.swift in Sources */,
 				4BEBEA2C2A0251F200C05858 /* PostsViewController.swift in Sources */,
+				4B7D1C832A02AD9A00CF23EC /* PostTableViewCell.swift in Sources */,
+				4B7D1C792A02A96C00CF23EC /* Post.swift in Sources */,
 				4BEBEA3B2A02729D00C05858 /* String+Extension.swift in Sources */,
 				4BEBEA112A023EDD00C05858 /* LoginViewController.swift in Sources */,
 				4BEBEA3C2A02729D00C05858 /* RxSwift+Extension.swift in Sources */,
 				4BEBEA2E2A0252BF00C05858 /* FavoritesViewController.swift in Sources */,
 				4BEBEA172A023EDD00C05858 /* posts_ios.xcdatamodeld in Sources */,
 				4BEBEA372A02725700C05858 /* LoginViewModel.swift in Sources */,
+				4B7D1C7B2A02AA0A00CF23EC /* PostsViewModel.swift in Sources */,
+				4B7D1C7D2A02AA8700CF23EC /* APIService.swift in Sources */,
 				4BEBEA0D2A023EDD00C05858 /* AppDelegate.swift in Sources */,
 				4BEBEA302A025BC500C05858 /* DashboardViewController.swift in Sources */,
 				4BEBEA0F2A023EDD00C05858 /* SceneDelegate.swift in Sources */,
@@ -459,6 +491,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		4B7D1C862A02CFC200CF23EC /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		4BEBEA3D2A02746600C05858 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
@@ -478,6 +518,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		4B7D1C872A02CFC200CF23EC /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4B7D1C862A02CFC200CF23EC /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
 		4BEBEA3E2A02746600C05858 /* RxCocoa */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 4BEBEA3D2A02746600C05858 /* XCRemoteSwiftPackageReference "RxSwift" */;
