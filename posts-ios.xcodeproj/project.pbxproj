@@ -17,6 +17,7 @@
 		4B7D1C832A02AD9A00CF23EC /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7D1C822A02AD9A00CF23EC /* PostTableViewCell.swift */; };
 		4B7D1C852A02B51200CF23EC /* PostTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7D1C842A02B51200CF23EC /* PostTableViewDataSource.swift */; };
 		4B7D1C882A02CFC200CF23EC /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 4B7D1C872A02CFC200CF23EC /* Alamofire */; };
+		4BEA9A9F2A0399C900E12CB2 /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEA9A9E2A0399C900E12CB2 /* FavoritesViewModel.swift */; };
 		4BEBEA0D2A023EDD00C05858 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEBEA0C2A023EDD00C05858 /* AppDelegate.swift */; };
 		4BEBEA0F2A023EDD00C05858 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEBEA0E2A023EDD00C05858 /* SceneDelegate.swift */; };
 		4BEBEA112A023EDD00C05858 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEBEA102A023EDD00C05858 /* LoginViewController.swift */; };
@@ -45,6 +46,7 @@
 		4B7D1C7C2A02AA8700CF23EC /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		4B7D1C822A02AD9A00CF23EC /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		4B7D1C842A02B51200CF23EC /* PostTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewDataSource.swift; sourceTree = "<group>"; };
+		4BEA9A9E2A0399C900E12CB2 /* FavoritesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
 		4BEBEA092A023EDD00C05858 /* posts-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "posts-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BEBEA0C2A023EDD00C05858 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BEBEA0E2A023EDD00C05858 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				4BEBEA362A02725700C05858 /* LoginViewModel.swift */,
 				4B7D1C842A02B51200CF23EC /* PostTableViewDataSource.swift */,
 				4B7D1C7A2A02AA0A00CF23EC /* PostsViewModel.swift */,
+				4BEA9A9E2A0399C900E12CB2 /* FavoritesViewModel.swift */,
 				4B3F070C2A0330C8006B6C1D /* CoreDataStack.swift */,
 			);
 			path = ViewModels;
@@ -279,6 +282,7 @@
 				4BEBEA112A023EDD00C05858 /* LoginViewController.swift in Sources */,
 				4BEBEA3C2A02729D00C05858 /* RxSwift+Extension.swift in Sources */,
 				4BEBEA2E2A0252BF00C05858 /* FavoritesViewController.swift in Sources */,
+				4BEA9A9F2A0399C900E12CB2 /* FavoritesViewModel.swift in Sources */,
 				4BEBEA172A023EDD00C05858 /* posts_ios.xcdatamodeld in Sources */,
 				4BEBEA372A02725700C05858 /* LoginViewModel.swift in Sources */,
 				4B7D1C7B2A02AA0A00CF23EC /* PostsViewModel.swift in Sources */,

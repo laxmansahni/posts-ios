@@ -104,10 +104,58 @@
                     <view key="view" contentMode="scaleToFill" id="AlX-4B-r7I">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="S6J-Hi-lmc">
+                                <rect key="frame" x="-12" y="-14" width="414" height="814"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FavoriteTableViewCell" rowHeight="70" id="cvx-Um-fuW" customClass="PostTableViewCell" customModule="posts_ios" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="414" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cvx-Um-fuW" id="agc-S5-p8T">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="58q-Ev-a9u">
+                                                    <rect key="frame" x="25" y="11" width="364" height="21"/>
+                                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLP-Xy-dtm">
+                                                    <rect key="frame" x="25" y="37" width="364" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="mkM-KD-W7J"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="gLP-Xy-dtm" firstAttribute="leading" secondItem="agc-S5-p8T" secondAttribute="leadingMargin" constant="5" id="0C6-lW-grc"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="gLP-Xy-dtm" secondAttribute="trailing" constant="5" id="BTb-z1-bJk"/>
+                                                <constraint firstItem="gLP-Xy-dtm" firstAttribute="top" secondItem="58q-Ev-a9u" secondAttribute="bottom" constant="5" id="NDv-FY-66o"/>
+                                                <constraint firstItem="58q-Ev-a9u" firstAttribute="top" secondItem="agc-S5-p8T" secondAttribute="topMargin" id="U6m-Jr-9JF"/>
+                                                <constraint firstItem="58q-Ev-a9u" firstAttribute="leading" secondItem="agc-S5-p8T" secondAttribute="leadingMargin" constant="5" id="gcM-vL-2Hf"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="58q-Ev-a9u" secondAttribute="trailing" constant="5" id="sOZ-VO-kW1"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="postIdLabel" destination="58q-Ev-a9u" id="5ha-K1-CAU"/>
+                                            <outlet property="postTitleLabel" destination="gLP-Xy-dtm" id="FRl-Fo-gHd"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="WH0-0e-Wlc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Favorites" id="cV4-m3-6yO"/>
+                    <connections>
+                        <outlet property="favoriteTableView" destination="S6J-Hi-lmc" id="Q3O-Az-UXg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hE2-xT-Irg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
