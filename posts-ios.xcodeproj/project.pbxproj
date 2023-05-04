@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B3925362A035D2B00727F8E /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3925352A035D2B00727F8E /* ConnectionManager.swift */; };
 		4B3F070A2A032DC1006B6C1D /* PostCD+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3F07082A032DC1006B6C1D /* PostCD+CoreDataProperties.swift */; };
 		4B3F070B2A032DC1006B6C1D /* PostCD+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3F07092A032DC1006B6C1D /* PostCD+CoreDataClass.swift */; };
 		4B3F070D2A0330C8006B6C1D /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3F070C2A0330C8006B6C1D /* CoreDataStack.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4B3925352A035D2B00727F8E /* ConnectionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionManager.swift; sourceTree = "<group>"; };
 		4B3F07082A032DC1006B6C1D /* PostCD+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PostCD+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		4B3F07092A032DC1006B6C1D /* PostCD+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PostCD+CoreDataClass.swift"; sourceTree = "<group>"; };
 		4B3F070C2A0330C8006B6C1D /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 			children = (
 				4BEBEA392A02729D00C05858 /* String+Extension.swift */,
 				4BEBEA3A2A02729D00C05858 /* RxSwift+Extension.swift */,
+				4B3925352A035D2B00727F8E /* ConnectionManager.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				4B7D1C832A02AD9A00CF23EC /* PostTableViewCell.swift in Sources */,
 				4B3F070D2A0330C8006B6C1D /* CoreDataStack.swift in Sources */,
 				4B7D1C792A02A96C00CF23EC /* Post.swift in Sources */,
+				4B3925362A035D2B00727F8E /* ConnectionManager.swift in Sources */,
 				4BEBEA3B2A02729D00C05858 /* String+Extension.swift in Sources */,
 				4BEBEA112A023EDD00C05858 /* LoginViewController.swift in Sources */,
 				4BEBEA3C2A02729D00C05858 /* RxSwift+Extension.swift in Sources */,

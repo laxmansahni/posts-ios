@@ -14,16 +14,23 @@ class PostsViewController: UIViewController {
     private var postViewModel : PostsViewModel!
     
     private var dataSource : PostTableViewDataSource<PostTableViewCell,Post>!
+    let connectionManager = ConnectionManager.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        /// Usage of ConnectionManager class
+        if connectionManager.isConnected {
+            print("Connected")
+        } else {
+            print("Disconnected")
+        }
         callToViewModelForUIUpdate()
     }
     
     func callToViewModelForUIUpdate(){
-        
         self.postViewModel =  PostsViewModel()
         self.postViewModel.bindPostViewModelToController = {
             self.updateDataSource()

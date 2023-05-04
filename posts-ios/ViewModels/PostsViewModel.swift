@@ -19,6 +19,8 @@ class PostsViewModel : NSObject {
     
     var bindPostViewModelToController : (() -> ()) = {}
     
+    public var isConnected: Bool = false
+    
     override init() {
         super.init()
         self.apiService =  APIService()
@@ -26,6 +28,9 @@ class PostsViewModel : NSObject {
     }
     
     func callFuncToGetEmpData() {
+//        self.fetchDataFromCoreData { (postData) in
+//            self.postData = postData
+//        }
         self.apiService.apiToGetPostData { (postData) in
             self.postData = postData
             self.clearData()
@@ -33,7 +38,7 @@ class PostsViewModel : NSObject {
         }
     }
     
-    private func createPhotoEntityFrom(post: Post) -> NSManagedObject? {
+    private func createPostEntityFrom(post: Post) -> NSManagedObject? {
         
         let context = CoreDataStack.sharedInstance.persistentContainer.viewContext
         if let postCD = NSEntityDescription.insertNewObject(forEntityName: "PostCD", into: context) as? PostCD {
@@ -45,7 +50,7 @@ class PostsViewModel : NSObject {
     }
     
     private func saveInCoreDataWith(posts: [Post]) {
-        _ = posts.map{self.createPhotoEntityFrom(post: $0)}
+        _ = posts.map{self.createPostEntityFrom(post: $0)}
         do {
             try CoreDataStack.sharedInstance.persistentContainer.viewContext.save()
         } catch let error {
@@ -65,6 +70,25 @@ class PostsViewModel : NSObject {
             } catch let error {
                 print("ERROR DELETING : \(error)")
             }
+        }
+    }
+    
+    private func fetchDataFromCoreData(completion : @escaping (Posts) -> ()){
+        do {
+            
+            let context = CoreDataStack.sharedInstance.persistentContainer.viewContext
+            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: String(describing: PostCD.self))
+            var posts = [Post]()
+            do {
+                let objects  = try context.fetch(fetchRequest) as? [PostCD]
+                for object in objects ?? [] {
+                    let post = Post(userID: 0, id: object.id, title: object.title, body: "")
+                    posts.append(post)
+                }
+            } catch let error {
+                print("ERROR FETCHING : \(error)")
+            }
+            completion(posts)
         }
     }
 }
