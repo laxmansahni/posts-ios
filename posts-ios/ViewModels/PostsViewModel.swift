@@ -13,28 +13,30 @@ class PostsViewModel : NSObject {
     private var apiService : APIService!
     private(set) var postData : [Post]! {
         didSet {
-            self.bindPostViewModelToController()
+            self.bindPostViewModelToController?()
         }
     }
     
-    var bindPostViewModelToController : (() -> ()) = {}
+    var bindPostViewModelToController : (() -> ())?
     
     public var isConnected: Bool = false
     
     override init() {
         super.init()
         self.apiService =  APIService()
-        callFuncToGetEmpData()
     }
     
-    func callFuncToGetEmpData() {
-//        self.fetchDataFromCoreData { (postData) in
-//            self.postData = postData
-//        }
-        self.apiService.apiToGetPostData { (postData) in
-            self.postData = postData
-            self.clearData()
-            self.saveInCoreDataWith(posts: postData)
+    func GetPostData() {
+        if isConnected {
+            self.apiService.apiToGetPostData { (postData) in
+                self.postData = postData
+                self.clearData()
+                self.saveInCoreDataWith(posts: postData)
+            }
+        } else {
+            self.fetchDataFromCoreData { (postData) in
+                self.postData = postData
+            }
         }
     }
     
@@ -78,6 +80,7 @@ class PostsViewModel : NSObject {
             
             let context = CoreDataStack.sharedInstance.persistentContainer.viewContext
             let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: String(describing: PostCD.self))
+            fetchRequest.sortDescriptors = [NSSortDescriptor(key: "id", ascending: true)]
             var posts = [Post]()
             do {
                 let objects  = try context.fetch(fetchRequest) as? [PostCD]
@@ -89,6 +92,26 @@ class PostsViewModel : NSObject {
                 print("ERROR FETCHING : \(error)")
             }
             completion(posts)
+        }
+    }
+    
+    func updateInCoreDataWith(post: Post) {
+        let context = CoreDataStack.sharedInstance.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: String(describing: PostCD.self))
+        fetchRequest.predicate = NSPredicate(format: "id = %d", post.id)
+        
+        do {
+            let objects = try context.fetch(fetchRequest)
+            let objectUpdate = objects[0] as! PostCD
+            objectUpdate.setValue(true, forKey: "isFavorite")
+            do {
+                try context.save()
+            }
+            catch {
+                print(error)
+            }
+        } catch {
+            print(error)
         }
     }
 }

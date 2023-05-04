@@ -183,26 +183,19 @@ extension LoginViewController {
 
 // MARK: - IBActions
 extension LoginViewController {
-  @IBAction func onLoginButton(sender: UIButton) {
-    let alert = UIAlertController(title: "Login",
-                                  message: "Sending data...",
-                                  preferredStyle: .alert)
-    alert.addAction(UIAlertAction(title: "OK",
-                                  style: .default,
-                                  handler: { action in
-                                    switch action.style {
-                                    case .default:
-                                      print("default")
-                                        self.performSegue(withIdentifier: "submit", sender: sender)
-                                    case .cancel:
-                                      print("cancel")
-                                    case .destructive:
-                                      print("destructive")
-                                    }
-                                  }))
-    self.present(alert, animated: true)
-
-  }
+    @IBAction func onLoginButton(sender: UIButton) {
+        let alert = UIAlertController(title: "Login",
+                                      message: "Sending data...",
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK",
+                                      style: .default,
+                                      handler: { action in
+            self.performSegue(withIdentifier: "submit", sender: sender)
+            
+        }))
+        self.present(alert, animated: true)
+        
+    }
 }
 
 // MARK: - Navigation

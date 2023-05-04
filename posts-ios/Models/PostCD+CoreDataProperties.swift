@@ -17,5 +17,7 @@ extension PostCD {
 
     @NSManaged public var id: Int
     @NSManaged public var title: String
+    @NSManaged public var isFavorite: Bool
+    
 
 }

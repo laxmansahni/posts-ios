@@ -20,21 +20,22 @@ class PostsViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
+        self.postViewModel =  PostsViewModel()
         /// Usage of ConnectionManager class
         if connectionManager.isConnected {
-            print("Connected")
+            self.postViewModel.isConnected = true
         } else {
-            print("Disconnected")
+            self.postViewModel.isConnected = false
         }
         callToViewModelForUIUpdate()
+        self.postTableView.delegate = self
     }
     
     func callToViewModelForUIUpdate(){
-        self.postViewModel =  PostsViewModel()
         self.postViewModel.bindPostViewModelToController = {
             self.updateDataSource()
         }
+        self.postViewModel.GetPostData()
     }
     
     func updateDataSource(){
@@ -61,4 +62,11 @@ class PostsViewController: UIViewController {
     }
     */
 
+}
+
+extension PostsViewController: UITableViewDelegate {
+   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       let post = self.postViewModel.postData[indexPath.row]
+       self.postViewModel.updateInCoreDataWith(post: post)
+  }
 }
