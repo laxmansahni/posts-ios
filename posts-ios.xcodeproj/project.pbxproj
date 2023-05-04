@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B3F070A2A032DC1006B6C1D /* PostCD+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3F07082A032DC1006B6C1D /* PostCD+CoreDataProperties.swift */; };
+		4B3F070B2A032DC1006B6C1D /* PostCD+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3F07092A032DC1006B6C1D /* PostCD+CoreDataClass.swift */; };
+		4B3F070D2A0330C8006B6C1D /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3F070C2A0330C8006B6C1D /* CoreDataStack.swift */; };
 		4B7D1C792A02A96C00CF23EC /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7D1C782A02A96C00CF23EC /* Post.swift */; };
 		4B7D1C7B2A02AA0A00CF23EC /* PostsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7D1C7A2A02AA0A00CF23EC /* PostsViewModel.swift */; };
 		4B7D1C7D2A02AA8700CF23EC /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7D1C7C2A02AA8700CF23EC /* APIService.swift */; };
@@ -32,6 +35,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4B3F07082A032DC1006B6C1D /* PostCD+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PostCD+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4B3F07092A032DC1006B6C1D /* PostCD+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PostCD+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4B3F070C2A0330C8006B6C1D /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		4B7D1C782A02A96C00CF23EC /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		4B7D1C7A2A02AA0A00CF23EC /* PostsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewModel.swift; sourceTree = "<group>"; };
 		4B7D1C7C2A02AA8700CF23EC /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
@@ -134,6 +140,7 @@
 				4BEBEA362A02725700C05858 /* LoginViewModel.swift */,
 				4B7D1C842A02B51200CF23EC /* PostTableViewDataSource.swift */,
 				4B7D1C7A2A02AA0A00CF23EC /* PostsViewModel.swift */,
+				4B3F070C2A0330C8006B6C1D /* CoreDataStack.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -142,6 +149,8 @@
 			isa = PBXGroup;
 			children = (
 				4B7D1C782A02A96C00CF23EC /* Post.swift */,
+				4B3F07092A032DC1006B6C1D /* PostCD+CoreDataClass.swift */,
+				4B3F07082A032DC1006B6C1D /* PostCD+CoreDataProperties.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -260,6 +269,7 @@
 				4B7D1C852A02B51200CF23EC /* PostTableViewDataSource.swift in Sources */,
 				4BEBEA2C2A0251F200C05858 /* PostsViewController.swift in Sources */,
 				4B7D1C832A02AD9A00CF23EC /* PostTableViewCell.swift in Sources */,
+				4B3F070D2A0330C8006B6C1D /* CoreDataStack.swift in Sources */,
 				4B7D1C792A02A96C00CF23EC /* Post.swift in Sources */,
 				4BEBEA3B2A02729D00C05858 /* String+Extension.swift in Sources */,
 				4BEBEA112A023EDD00C05858 /* LoginViewController.swift in Sources */,
@@ -270,7 +280,9 @@
 				4B7D1C7B2A02AA0A00CF23EC /* PostsViewModel.swift in Sources */,
 				4B7D1C7D2A02AA8700CF23EC /* APIService.swift in Sources */,
 				4BEBEA0D2A023EDD00C05858 /* AppDelegate.swift in Sources */,
+				4B3F070B2A032DC1006B6C1D /* PostCD+CoreDataClass.swift in Sources */,
 				4BEBEA302A025BC500C05858 /* DashboardViewController.swift in Sources */,
+				4B3F070A2A032DC1006B6C1D /* PostCD+CoreDataProperties.swift in Sources */,
 				4BEBEA0F2A023EDD00C05858 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
